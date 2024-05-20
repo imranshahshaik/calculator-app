@@ -45,6 +45,7 @@ input{
     border-radius: 10px;
     color: white;
     font-size: xx-large;
+    
 }
 
 .flex{
@@ -56,18 +57,40 @@ main{
     width: 400px;
     height: fit-content;
     border-radius: 15px;
-    border: none;
+    overflow: hidden;
     margin: 0, auto;
     background-color: hsl(0, 30%, 8%);
 
     transform: translateX(-150%);
     animation: calculator 3s ease-out forwards;
+
+    
+    border: 8px solid rgb(255, 0, 0); /* Initial border color */
+    /* animation: calculator 3s ease-out forwards, change-color 0.5s infinite; Blink animation added */
+    animation: calculator 3s ease-out forwards, changeColor 3s infinite;
 }
 @keyframes calculator {
     100%{
         transform: translate(0);
     }    
 }
+
+/* @keyframes blink {
+    0% { border-color: rgb(255, 0, 0); }
+    25% { border-color: rgb(0, 255, 0); }
+    50% { border-color: rgb(0, 0, 255); }
+    75% { border-color: rgb(255, 255, 0); }
+    100% { border-color: rgb(255, 0, 255); }
+} */
+
+@keyframes changeColor {
+    0% { border-color: rgb(255, 0, 0); }
+    25% { border-color: rgb(0, 255, 0); }
+    50% { border-color: rgb(0, 0, 255); }
+    75% { border-color: rgb(255, 255, 0); }
+    100% { border-color: rgb(255, 0, 255); }
+}
+
 
 h1{
     background-color: rgb(253, 254, 255);
@@ -78,3 +101,5 @@ h1{
     font-size: 50px;
 
 }
+
+

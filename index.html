@@ -9,10 +9,10 @@
 <body>
     <main>
         <h1>Calculator App</h1>
-        <input type="text" id="display" readonly>
+        <input type="text" id="display" aria-live="assertive" readonly>
     <div class="flex">
         <button onclick="appendToDisplay('+')" class="symbols">+</button>
-        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('7')" aria-label="Add">7</button>
         <button onclick="appendToDisplay('8')">8</button>
         <button onclick="appendToDisplay('9')">9</button>
     </div>
